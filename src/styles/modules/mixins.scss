@@ -1,0 +1,14 @@
+
+// For other sizes with extended media queries
+@mixin screen-size($size) {
+  @media only screen and #{$size} {
+    @content;
+  }
+}
+
+// Media query for screen sizes (mobile tablet or whatever)
+@mixin breakpoint($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}

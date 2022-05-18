@@ -1,0 +1,52 @@
+.btn {
+  position: relative;
+  font-weight: bold;
+  padding: 0.7rem 1.75rem;
+  margin: 0.55rem;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: $--border-radius;
+
+  &.btn-primary {
+    background-color: $--color-primary;
+    color: $--color-white;
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    color: $--color-primary;
+    box-shadow: inset 0 0 0 1px $--color-primary;
+  }
+
+  &.btn-lg {
+    padding: 0.75rem 2rem;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-color: $--color-black;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: inherit;
+    transition: opacity $--transition-time;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0.05;
+    }
+  }
+
+  &:active {
+    transform: scale(0.96);
+    &::before {
+      opacity: 0.08;
+    }
+  }
+}

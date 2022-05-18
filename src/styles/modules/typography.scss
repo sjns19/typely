@@ -1,0 +1,109 @@
+/* -----------------------------------
+  Text colors
+----------------------------------- */
+.txt-primary {
+  color: $--color-primary;
+}
+
+.txt-grey {
+  color: $--color-grey;
+}
+
+/* -----------------------------------
+  Text alignment
+----------------------------------- */
+.txt-center {
+  text-align: center;
+}
+
+/* -----------------------------------
+  Text sizes
+----------------------------------- */
+.txt-sm {
+  font-size: 0.65rem;
+}
+
+.txt-md {
+  font-size: 1.35rem;
+}
+
+.txt-lg {
+  font-size: 1.75rem;
+}
+
+.txt-xl {
+  font-size: 4.75rem;
+  @include breakpoint($--breakpoint-mobile) {
+    font-size: 2.8rem;
+  }
+}
+
+/* -----------------------------------
+  Text casing
+----------------------------------- */
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+/* -----------------------------------
+  Correct or incorrect text (animated)
+----------------------------------- */
+.txt-correct {
+  position: relative;
+  color: $--color-success;
+  &::before {
+    position: absolute;
+    content: attr(data-text);
+    animation: fade-up 0.8s forwards;
+  }
+}
+
+.txt-incorrect {
+  text-decoration: line-through;
+  text-decoration-color: $--color-primary;
+  animation: shake $--transition-time forwards;
+}
+
+/* -----------------------------------
+  Link texts
+----------------------------------- */
+.txt-link {
+  color: inherit;
+  cursor: pointer;
+  transition: opacity $--transition-time;
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
+
+/* -----------------------------------
+  Font weight
+----------------------------------- */
+.txt-normal {
+  font-weight: 400;
+}
+
+.txt-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+/* -----------------------------------
+  Block text (used for spans to break them down)
+----------------------------------- */
+.txt-block {
+  display: block;
+}
+
+/* -----------------------------------
+  Emoji classes
+----------------------------------- */
+.emoji-md {
+  font-size: 1.5rem;
+}
+
+.emoji-xl {
+  font-size: 5rem;
+}
