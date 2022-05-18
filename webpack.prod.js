@@ -10,6 +10,9 @@ module.exports = merge(common, {
     filename: "./assets/js/app.[contenthash].js",
     assetModuleFilename: "./assets/images/[name].[contenthash][ext]",
     clean: true,
+    environment: {
+      arrowFunction: false,
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({
