@@ -12,6 +12,10 @@ module.exports = merge(common, {
     clean: true,
     environment: {
       arrowFunction: false,
+      destructuring: false,
+      const: false,
+      module: false,
+      dynamicImport: false,
     },
   },
   plugins: [
