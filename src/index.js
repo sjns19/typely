@@ -184,14 +184,18 @@ Tester.input.addEventListener("input", function (e) {
     Tester.typedWordList = typedWord;
   }
 
+  console.log(Tester.testType);
+
   /**
    * Since it's not possible to detect the pressed key code inside of the "input"
    * event, check if the next array item is blank (space), means, the user pressed
-   * space key. Push the typed word in the typedWordList array and clear the input.
+   * space key. Push the typed word into the typedWordList array and clear the input.
    */
-  if (typedWord[1] == "") {
+  let spacePressed = typedWord[1] === "";
+
+  if (spacePressed) {
     if (Tester.testType === 1) {
-      // Push the word into the typedWordList array upon pressing the psace key.
+      // Push the word into the typedWordList array upon pressing the space key.
       Tester.typedWordList.push(typedWord[0]);
     }
     input.value = null;
@@ -212,6 +216,7 @@ Tester.input.addEventListener("input", function (e) {
 
     if (span.classList.contains("txt-correct")) {
       Words.corrected++;
+      console.log(Words.corrected);
     }
 
     if (span.classList.contains("txt-incorrect")) {
@@ -219,14 +224,14 @@ Tester.input.addEventListener("input", function (e) {
     }
   });
 
+  Words.updateStats();
+
   /**
    * Apparently, this has to be checked again cause if we move the forEach loop above
    * inside the single statement checking this, the words/letters are not marked correct
    * or incorrect as user types cause we are checking for the space afterall.
    */
-  if (typedWord[1] == "") {
-    Words.updateStats();
-
+  if (spacePressed) {
     // Display next quote/letter once the user completes typing the current one.
     let listLen = Tester.typedWordList.length;
     let len = Tester.testType === 1 ? listLen : listLen - 1;
@@ -243,7 +248,7 @@ Tester.input.addEventListener("input", function (e) {
   }
 });
 
-// Stop user from copy/pasting the quote into the textarea (that's kinda cheating)
+// Stop user from copy/pasting the quote into the text input (that's cheating)
 Tester.input.addEventListener("paste", (e) => e.preventDefault());
 
 Tester.backButton.addEventListener("click", (e) => {

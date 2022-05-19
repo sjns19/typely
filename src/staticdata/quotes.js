@@ -12,7 +12,7 @@ export default [
   "Grand Canyon National Park, a world heritage site, belongs to everyone. Rocks, plants, wood and artifacts must be left where you found them so others can enjoy them.",
   "The Grand Canyon is home to about 1000 caves, but only 335 have been explored and recorded. Likewise, only a few of the caves at the Grand Canyon have been mapped.",
   "The North Pole has no land mass at all. Instead, it is made up of huge ice floes, 6 to 10 feet thick, that float on the surface of the Arctic Ocean.",
-  "The word 'Pacific' means peaceful. The Pacific Ocean got its name from the explorer Ferdinand Magellan. He called the ocean “mar pacific”, which meant peaceful sea.",
+  "The word 'Pacific' means peaceful. The Pacific Ocean got its name from the explorer Ferdinand Magellan. He called the ocean 'mar pacific', which meant peaceful sea.",
   "The first successful summit of Mount Everest was recorded on May 29, 1953 by Sir Edmund Hillary from New Zealand. He was accompanied by Tenzing Norgay, a Sherpa from Nepal.",
   "Bread was invented in Egypt around 8,000 BC. The first examples of it were flat and unleavened, most closely resembling what we know today as tortillas in Latin America.",
   "In 2007, two Russian submarines embarked on a record-breaking dive to the seabed of the North Pole, two and a half miles beneath the surface of the Arctic Ocean.",
