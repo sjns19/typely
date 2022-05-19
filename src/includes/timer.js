@@ -1,7 +1,7 @@
 const Timer = {
   handler: null,
   counter: 0,
-  initial: 30,
+  initial: 60,
   duration: 1000, // One second
   container: document.querySelector(".js-wpm-time"),
 
