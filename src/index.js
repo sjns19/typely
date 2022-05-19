@@ -184,8 +184,6 @@ Tester.input.addEventListener("input", function (e) {
     Tester.typedWordList = typedWord;
   }
 
-  console.log(Tester.testType);
-
   /**
    * Since it's not possible to detect the pressed key code inside of the "input"
    * event, check if the next array item is blank (space), means, the user pressed
@@ -209,17 +207,10 @@ Tester.input.addEventListener("input", function (e) {
     } else if (word === span.innerText) {
       span.classList.add("txt-correct");
       span.classList.remove("txt-incorrect");
+      Words.corrected++;
     } else {
       span.classList.add("txt-incorrect");
       span.classList.remove("txt-correct");
-    }
-
-    if (span.classList.contains("txt-correct")) {
-      Words.corrected++;
-      console.log(Words.corrected);
-    }
-
-    if (span.classList.contains("txt-incorrect")) {
       Words.incorrected++;
     }
   });
@@ -239,10 +230,10 @@ Tester.input.addEventListener("input", function (e) {
     if (len == Quotes.currentQuote.length) {
       Words.totalCorrected += Words.corrected;
       Words.totalIncorrected += Words.incorrected;
-      Words.correctled = 0;
+      Tester.typedWordList = [];
+      Words.corrected = 0;
       Words.incorrected = 0;
 
-      Tester.typedWordList = [];
       Quotes.update(Tester.testType);
     }
   }
@@ -250,7 +241,6 @@ Tester.input.addEventListener("input", function (e) {
 
 // Stop user from copy/pasting the quote into the text input (that's cheating)
 Tester.input.addEventListener("paste", (e) => e.preventDefault());
-
 Tester.backButton.addEventListener("click", (e) => {
   e.preventDefault();
 
