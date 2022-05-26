@@ -9,6 +9,14 @@ import Identifier from "./includes/identifier";
 
 ("use strict");
 
+window.addEventListener("beforeunload", function (e) {
+  if (Timer.handler !== null) {
+    var confirmationMessage = "o/";
+    e.returnValue = confirmationMessage;
+    return confirmationMessage;
+  }
+});
+
 window.addEventListener("load", () => Page.loadTheme());
 
 const Tester = {
