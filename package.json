@@ -1,27 +1,29 @@
 {
-  "name": "typing-speed-tester-by-sjn",
-  "version": "1.0.2",
-  "description": "A simple typing speed tester by Sjn",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --config webpack.prod.js",
-    "dev": "webpack serve --open --config webpack.dev.js"
-  },
-  "author": "Sujan Shrestha",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.17.12",
-    "@babel/preset-env": "^7.17.12",
-    "babel-loader": "^8.2.5",
-    "css-loader": "^6.7.1",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.0",
-    "sass": "^1.51.0",
-    "sass-loader": "^12.6.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.9.0",
-    "webpack-merge": "^5.8.0"
-  }
+	"name": "typing-speed-tester-by-sjn",
+	"version": "1.0.2",
+	"description": "A simple typing speed tester by Sjn",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --config webpack.prod.js",
+		"dev": "webpack serve --open --config webpack.dev.js"
+	},
+	"author": "Sujan Shrestha",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.22.10",
+		"@babel/preset-env": "^7.17.12",
+		"@babel/preset-typescript": "^7.22.5",
+		"babel-loader": "^8.2.5",
+		"css-loader": "^6.7.1",
+		"html-webpack-plugin": "^5.5.0",
+		"mini-css-extract-plugin": "^2.6.0",
+		"sass": "^1.51.0",
+		"sass-loader": "^12.6.0",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.4.4",
+		"webpack": "^5.88.2",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1",
+		"webpack-merge": "^5.9.0"
+	}
 }

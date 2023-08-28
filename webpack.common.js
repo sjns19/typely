@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    bundle: path.resolve(__dirname, "src/index.ts"),
   },
   module: {
     rules: [
@@ -22,21 +22,24 @@ module.exports = {
           "sass-loader",
         ],
       },
+			{
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: ["ts-loader"],
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env"],
-          },
-        },
+        use: ["babel-loader"],
       },
       {
         test: /\.(png|svg|jpe?g|gif|json)$/,
         type: "asset/resource",
       },
     ],
+  },
+	resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({

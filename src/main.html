@@ -1,145 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="type,typing,typing test,typing tester,typing speed,typing speed tester,wpm,wpm tester,wpm test,letter test,nnmber test" />
-  <meta name="description" content="Test your words, letters or numbers typing speed under 60 seconds." />
-  <meta name="theme-color" content="#000000" id="browser-header" />
 
-  <link rel="apple-touch-icon" sizes="60x60" href="<%= require('./images/icons/apple-icon-60x60.png') %>">
-  <link rel="apple-touch-icon" sizes="72x72" href="<%= require('./images/icons/apple-icon-72x72.png') %>">
-  <link rel="apple-touch-icon" sizes="76x76" href="<%= require('./images/icons/apple-icon-76x76.png') %>">
-  <link rel="icon" type="image/png" sizes="192x192"  href="<%= require('./images/icons/android-icon-192x192.png') %>">
-  <link rel="icon" type="image/png" sizes="32x32" href="<%= require('./images/icons/favicon-32x32.png') %>">
-  <link rel="icon" type="image/png" sizes="96x96" href="<%= require('./images/icons/favicon-96x96.png') %>">
-  <link rel="icon" type="image/png" sizes="16x16" href="<%= require('./images/icons/favicon-16x16.png') %>">
-  <link rel="manifest" href="<%= require('./images/icons/manifest.json') %>">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="<%= require('./images/icons/ms-icon-144x144.png') %>">
-  <meta name="theme-color" content="#ffffff">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Roboto+Mono:wght@300&&family=Montserrat:wght@800&display=swap" rel="stylesheet">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-  <!--<link rel="stylesheet" href="src/style.css">-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"
+		content="type,typing,typing test,typing tester,typing speed,typing speed tester,wpm,wpm tester,wpm test,letter test,nnmber test" />
+	<meta name="description" content="Test your words, letters or numbers typing speed under 60 seconds." />
+	<meta name="theme-color" content="#000000" id="browser-header" />
+
+	<link rel="apple-touch-icon" sizes="60x60" href="<%= require('./images/icons/apple-icon-60x60.png') %>">
+	<link rel="apple-touch-icon" sizes="72x72" href="<%= require('./images/icons/apple-icon-72x72.png') %>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<%= require('./images/icons/apple-icon-76x76.png') %>">
+	<link rel="icon" type="image/png" sizes="192x192" href="<%= require('./images/icons/android-icon-192x192.png') %>">
+	<link rel="icon" type="image/png" sizes="32x32" href="<%= require('./images/icons/favicon-32x32.png') %>">
+	<link rel="icon" type="image/png" sizes="96x96" href="<%= require('./images/icons/favicon-96x96.png') %>">
+	<link rel="icon" type="image/png" sizes="16x16" href="<%= require('./images/icons/favicon-16x16.png') %>">
+	<link rel="manifest" href="<%= require('./images/icons/manifest.json') %>">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="<%= require('./images/icons/ms-icon-144x144.png') %>">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Roboto+Mono:wght@300&&family=Montserrat:wght@800&display=swap"
+		rel="stylesheet">
+	<title>
+		<%= htmlWebpackPlugin.options.title %>
+	</title>
 </head>
+
 <body class="body">
-  <main class="container-fluid">
-    <section class="section">
-      <div class="section-contents is-active" id="section-home" style="margin-top: 15%;">
-        <div class="flex flex-dir-col txt-center">
-          <div class="card">
-            <div class="card-header my-6">
-              <h1 class="txt-lg txt-normal">How fast is your <span class="txt-primary txt-xl txt-uppercase txt-block txt-bold">typing speed?</span></h1>
-            </div>
-            <div class="card-body">
-              <p>Test it out <span class="emoji-md">👇</span></p>
-            </div>
-            <div class="card-footer">
-              <div class="grid">
-                <div class="grid-item" title="Test your letters typing speed">
-                  <div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
-                    <div class="card-header">
-                      <img src="<%= require('./images/letters.svg') %>" alt="Letters icon">
-                    </div>
-                    <div class="card-body">
-                      <p class="txt-uppercase p-1">letters</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid-item" title="Test your words typing speed">
-                  <div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
-                    <div class="card-header">
-                      <img src="<%= require('./images/sentences.svg') %>" alt="Sentence icon">
-                    </div>
-                    <div class="card-body">
-                      <p class="txt-uppercase p-1">words</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid-item" title="Test your numbers typing speed">
-                  <div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
-                    <div class="card-header">
-                      <img src="<%= require('./images/numbers.svg') %>" alt="Numbers icon">
-                    </div>
-                    <div class="card-body">
-                      <p class="txt-uppercase p-1">numbers</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-          
-      <div class="section-contents" id="section-test">
-        <div class="card">
-          <div class="card-header card-header-bordered flex align-center justify-space-between">
-            <a href=":javascript;" class="txt-link px-1 js-back-btn" title="Back">
-              <svg class="card-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
-              </svg>
-            </a>
-            <div class="flex align-center">
-              <div class="txt-center px-1">
-                <p class="txt-primary txt-lg js-wpm-time"></p>
-                <small class="txt-uppercase txt-sm">seconds</small>
-              </div>
-            </div>
-            <div class="flex align-center">
-              <div class="txt-center px-1">
-                <p class="txt-primary txt-lg js-corrected-count"></p>
-                <small class="txt-uppercase txt-sm">corrected</small>
-              </div>
-              <div class="txt-center px-1">
-                <p class="txt-primary txt-lg js-incorrected-count"></p>
-                <small class="txt-uppercase txt-sm">typos</small>
-              </div>
-              <div class="txt-center px-1">
-                <p class="txt-primary txt-lg js-accuracy"></p>
-                <small class="txt-uppercase txt-sm">accuracy</small>
-              </div>
-            </div>
-          </div>
-      
-          <div class="card-body">
-            <p class="quotes js-quote"></p>
-          </div>
-          <div class="card-footer">
-            <input 
-              class="input js-test-input"
-              autocapitalize="off" 
-              autocapitalize="off"
-              placeholder="Type..."
-            />
-          </div>
-        </div>
-      </div>
-    </section>  
-  </main>
-  <footer class="flex flex-dir-col align-center justify-center py-2 js-footer">
-    <small class="txt-grey p-1">Designed and developed as a side project by <a href="https://github.com/sjns19" class="txt-link" title="Sujan Shrestha" target="_blank">Sujan</a>.</small>
-    <ul class="icon-group">
-      <li class="icon tooltip js-theme-btn">
-        <svg class="icon-vector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path id="theme-icon-dark" d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
-          <path id="theme-icon-light" d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
-        </svg>
-      </li>
-      <li class="icon tooltip" data-tooltip="Github Source">
-        <a href="https://github.com/sjns19/typely" target="_blank">
-          <svg class="icon-vector" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" />
-          </svg>
-        </a>
-      </li>
-    </ul>
-  </footer>
+	<main class="container-fluid">
+
+		<section class="section" id="home-page" style="margin-top: 12%;">
+			<div class="card">
+				<div class="card-header my-6">
+					<h1 class="txt-lg txt-normal">
+						How fast is your
+						<span class="txt-block txt-bold txt-xl txt-uppercase txt-primary">
+							typing speed?
+						</span>
+					</h1>
+				</div>
+				<div class="card-body">
+					<p>Test it out <span class="emoji-md">👇</span></p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="options-list">
+					<div class="option-card" title="Test your letters typing speed">
+						<div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
+							<div class="card-header">
+								<img src="<%= require('./images/letters.svg') %>" alt="Letters icon">
+							</div>
+							<div class="card-body">
+								<p class="txt-uppercase txt-bold p-1">letters</p>
+							</div>
+						</div>
+					</div>
+					<div class="option-card" title="Test your words typing speed">
+						<div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
+							<div class="card-header">
+								<img src="<%= require('./images/sentences.svg') %>" alt="Sentence icon">
+							</div>
+							<div class="card-body">
+								<p class="txt-uppercase txt-bold p-1">words</p>
+							</div>
+						</div>
+					</div>
+					<div class="option-card" title="Test your numbers typing speed">
+						<div class="card card-rounded card-grey card-clickable p-1 js-start-btn">
+							<div class="card-header">
+								<img src="<%= require('./images/numbers.svg') %>" alt="Numbers icon">
+							</div>
+							<div class="card-body">
+								<p class="txt-uppercase txt-bold p-1">numbers</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="test-page">
+			<div class="card">
+				<div class="card-header card-header-bordered flex align-center justify-space-between">
+					<a href=":javascript;" class="txt-link px-1 js-back-btn" title="Back">
+						<svg class="card-header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 20">
+							<path d="M0 0h24v24H0z" fill="none" />
+							<path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
+						</svg>
+					</a>
+					<div class="flex align-center">
+						<div class="txt-center px-1">
+							<p class="txt-primary txt-lg js-wpm-time"></p>
+							<small class="txt-uppercase txt-sm">seconds</small>
+						</div>
+					</div>
+					<div class="flex align-center">
+						<div class="txt-center px-1">
+							<p class="txt-primary txt-lg js-corrected-count"></p>
+							<small class="txt-uppercase txt-sm">corrected</small>
+						</div>
+						<div class="txt-center px-1">
+							<p class="txt-primary txt-lg js-incorrected-count"></p>
+							<small class="txt-uppercase txt-sm">typos</small>
+						</div>
+						<div class="txt-center px-1">
+							<p class="txt-primary txt-lg js-accuracy"></p>
+							<small class="txt-uppercase txt-sm">accuracy</small>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<p class="quotes js-quote"></p>
+				</div>
+				<div class="card-footer">
+					<input class="input js-test-input" autocapitalize="off" autocapitalize="off" placeholder="Type..." />
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<footer class="footer">
+		<p class="txt-lg txt-grey txt-bold">typely</p>
+		<p class="txt-grey p-1">
+			This application is a fun side project of
+			<a href="https://github.com/sjns19" class="txt-link" title="Sujan Shrestha" target="_blank">
+				Sujan
+			</a>. The application is fully static and does not use any backend technology or third party service.
+		</p>
+		<ul class="icon-group">
+			<li class="icon tooltip js-theme-btn">
+				<svg class="icon-vector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M0 0h24v24H0z" fill="none" />
+					<path id="theme-icon"
+						d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+				</svg>
+			</li>
+			<li class="icon tooltip" data-tooltip="Github Source">
+				<a href="https://github.com/sjns19/typely" target="_blank">
+					<svg class="icon-vector" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M1664 896q0 251-146.5 451.5t-378.5 277.5q-27 5-39.5-7t-12.5-30v-211q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-121-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-86-13.5q-44 113-7 204-79 85-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-40 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 89t.5 54q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" />
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</footer>
 </body>
+
 </html>

@@ -2,108 +2,168 @@
   Text colors
 ----------------------------------- */
 .txt-primary {
-  color: $--color-primary;
+	color: $--color-primary;
 }
 
 .txt-grey {
-  color: $--color-grey;
+	color: lighten($--color-grey, 25);
 }
 
 /* -----------------------------------
   Text alignment
 ----------------------------------- */
 .txt-center {
-  text-align: center;
+	text-align: center;
 }
 
 /* -----------------------------------
   Text sizes
 ----------------------------------- */
 .txt-sm {
-  font-size: 0.65rem;
+	font-size: 0.65rem;
 }
 
 .txt-md {
-  font-size: 1.35rem;
+	font-size: 1.35rem;
 }
 
 .txt-lg {
-  font-size: 1.75rem;
+	font-size: 1.75rem;
 }
 
 .txt-xl {
-  font-size: 4.75rem;
-  @include breakpoint($--breakpoint-mobile) {
-    font-size: 2.8rem;
-  }
+	font-size: 4.75rem;
+
+	@include breakpoint($--breakpoint-mobile) {
+		font-size: 2.8rem;
+	}
+}
+
+/* -----------------------------------
+  Text colors
+----------------------------------- */
+.txt-success {
+	color: $--color-success;
+}
+
+.txt-danger {
+	color: $--color-danger;
+}
+
+.txt-warning {
+	color: $--color-warning;
 }
 
 /* -----------------------------------
   Text casing
 ----------------------------------- */
 .txt-uppercase {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 /* -----------------------------------
   Correct or incorrect text (animated)
 ----------------------------------- */
+.txt-current {
+	position: relative;
+	color: darken($--color-warning, 10);
+
+	&::before {
+		position: absolute;
+		content: "";
+		background-color: $--color-warning;
+		height: 3px;
+		width: 100%;
+		bottom: 0;
+		animation: blink 1s forwards infinite;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 .txt-correct {
-  position: relative;
-  color: $--color-success;
-  &::before {
-    position: absolute;
-    content: attr(data-text);
-    animation: fade-up 0.8s forwards;
-  }
+	position: relative;
+	color: darken($--color-success, 10);
+
+	&::before {
+		position: absolute;
+		content: attr(data-text);
+		animation: fade-up 0.8s forwards;
+	}
 }
 
 .txt-incorrect {
-  text-decoration: line-through;
-  text-decoration-color: $--color-primary;
-  animation: shake $--transition-time forwards;
+	text-decoration: line-through;
+	text-decoration-color: $--color-primary;
+	animation: shake $--transition-time forwards;
 }
 
 /* -----------------------------------
   Link texts
 ----------------------------------- */
 .txt-link {
-  color: inherit;
-  cursor: pointer;
-  transition: opacity $--transition-time;
-  &:hover,
-  &:focus,
-  &:active {
-    opacity: 1;
-  }
+	color: inherit;
+	cursor: pointer;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $--color-primary;
+	}
 }
 
 /* -----------------------------------
   Font weight
 ----------------------------------- */
 .txt-normal {
-  font-weight: 400;
+	font-weight: 400;
 }
 
 .txt-bold {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+	//font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
 }
 
 /* -----------------------------------
   Block text (used for spans to break them down)
 ----------------------------------- */
 .txt-block {
-  display: block;
+	display: block;
 }
 
 /* -----------------------------------
   Emoji classes
 ----------------------------------- */
 .emoji-md {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .emoji-xl {
-  font-size: 5rem;
+	font-size: 5rem;
+}
+
+.theme-dark {
+	.txt-current {
+		color: $--color-warning;
+	}
+
+	.txt-correct {
+		color: $--color-success;
+	}
+
+	.txt-grey {
+		color: $--color-grey;
+	}
 }
