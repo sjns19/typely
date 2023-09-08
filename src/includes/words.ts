@@ -33,24 +33,7 @@ const Words: Words = {
 	updateStats: function () {
 		const { totalCorrected, totalIncorrected, accuracy } = this.getStats();
 
-		const accuracyContainer = this.accuracyContainer;
-
-		/*if (accuracy >= 95 && !accuracyContainer.classList.contains("txt-successr")) {
-			accuracyContainer.classList.add("txt-success");
-			accuracyContainer.classList.remove("txt-warning");
-			accuracyContainer.classList.remove("txt-danger");
-		} else if (accuracy >= 50 && !accuracyContainer.classList.contains("txt-warning")) {
-			accuracyContainer.classList.add("txt-warning");
-			accuracyContainer.classList.remove("txt-success");
-			accuracyContainer.classList.remove("txt-danger");
-		} else {
-			accuracyContainer.classList.add("txt-danger");
-			accuracyContainer.classList.remove("txt-success");
-			accuracyContainer.classList.remove("txt-warning");
-		}*/
-
-		accuracyContainer.innerText = `${accuracy}%`;
-
+		this.accuracyContainer.innerText = `${accuracy}%`;
 		this.correctedContainer.innerText = `${totalCorrected}`;
 		this.incorrectedContainer.innerText = `${totalIncorrected}`;
 	},

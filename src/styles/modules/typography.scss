@@ -1,6 +1,6 @@
-/* -----------------------------------
-  Text colors
------------------------------------ */
+@import "./keyframes.scss";
+
+/* Text colors */
 .txt-primary {
 	color: $--color-primary;
 }
@@ -9,16 +9,12 @@
 	color: lighten($--color-grey, 25);
 }
 
-/* -----------------------------------
-  Text alignment
------------------------------------ */
+/* Text alignment */
 .txt-center {
 	text-align: center;
 }
 
-/* -----------------------------------
-  Text sizes
------------------------------------ */
+/* Text sizes */
 .txt-sm {
 	font-size: 0.65rem;
 }
@@ -39,63 +35,41 @@
 	}
 }
 
-/* -----------------------------------
-  Text colors
------------------------------------ */
-.txt-success {
-	color: $--color-success;
+/* Text colors */
+.txt-red {
+	color: $--color-red;
 }
 
-.txt-danger {
-	color: $--color-danger;
+.txt-yellow {
+	color: $--color-yellow;
 }
 
-.txt-warning {
-	color: $--color-warning;
-}
-
-/* -----------------------------------
-  Text casing
------------------------------------ */
+/* Text casing */
 .txt-uppercase {
 	text-transform: uppercase;
 }
 
-/* -----------------------------------
-  Correct or incorrect text (animated)
------------------------------------ */
+/* Correct, incorrect or current texts (animated) */
 .txt-current {
+	$--color-yellow-darkened: darken($--color-yellow, 20);
+
 	position: relative;
-	color: darken($--color-warning, 10);
+	color: $--color-yellow-darkened;
 
 	&::before {
 		position: absolute;
 		content: "";
-		background-color: $--color-warning;
+		background-color: $--color-yellow-darkened;
 		height: 3px;
 		width: 100%;
 		bottom: 0;
-		animation: blink 1s forwards infinite;
-	}
-}
-
-@keyframes blink {
-	0% {
-		opacity: 1;
-	}
-
-	50% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
+		animation: blink 0.5s forwards infinite;
 	}
 }
 
 .txt-correct {
 	position: relative;
-	color: darken($--color-success, 10);
+	opacity: 0.3;
 
 	&::before {
 		position: absolute;
@@ -105,14 +79,14 @@
 }
 
 .txt-incorrect {
+	color: $--color-red;
+	opacity: 0.5;
 	text-decoration: line-through;
-	text-decoration-color: $--color-primary;
+	text-decoration-color: $--color-red;
 	animation: shake $--transition-time forwards;
 }
 
-/* -----------------------------------
-  Link texts
------------------------------------ */
+/* Link texts */
 .txt-link {
 	color: inherit;
 	cursor: pointer;
@@ -124,43 +98,35 @@
 	}
 }
 
-/* -----------------------------------
-  Font weight
------------------------------------ */
+/* Font weight */
 .txt-normal {
 	font-weight: 400;
 }
 
 .txt-bold {
-	//font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
 }
 
-/* -----------------------------------
-  Block text (used for spans to break them down)
------------------------------------ */
+/* Block text (used for inline elements to break them down) */
 .txt-block {
 	display: block;
 }
 
-/* -----------------------------------
-  Emoji classes
------------------------------------ */
-.emoji-md {
-	font-size: 1.5rem;
-}
-
-.emoji-xl {
-	font-size: 5rem;
-}
-
 .theme-dark {
-	.txt-current {
-		color: $--color-warning;
+	.txt-correct {
+		opacity: 0.5;
 	}
 
-	.txt-correct {
-		color: $--color-success;
+	.txt-incorrect {
+		opacity: 0.8;
+	}
+
+	.txt-current {
+		color: $--color-yellow;
+
+		&::before {
+			background-color: $--color-yellow;
+		}
 	}
 
 	.txt-grey {

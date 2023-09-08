@@ -22,7 +22,6 @@ html {
 
 .body {
 	background-color: $--color-white;
-	//background-image: url("../../src/images/keyboard.webp");
 	color: $--color-black;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -30,23 +29,19 @@ html {
 	letter-spacing: 0.2px;
 }
 
-/* -----------------------------------
-  Responsive container fluid
------------------------------------ */
+/* Responsive container fluid */
 .container-fluid {
 	margin: 0 auto;
 	max-width: $--container-width;
 }
 
-/* -----------------------------------
-  Section class
------------------------------------ */
+/* Section class */
 .section {
 	position: relative;
 	display: block;
 	width: 100%;
 
-	//Need to apply specific flex styles to this element only
+	// Need to apply specific flex styles to this element only
 	&#home-page {
 		display: flex;
 		flex-direction: column;
@@ -91,12 +86,15 @@ html {
 	}
 }
 
-/* -----------------------------------
-  Clickable option blocks
------------------------------------ */
-.options-list {
+/* Clickable option blocks for test types */
+.option-list {
 	display: flex;
 	flex-wrap: wrap;
+
+	&-card {
+		padding: 0.75rem;
+		flex-basis: 33.33%;
+	}
 
 	@include breakpoint($--breakpoint-tablet) {
 		flex-direction: column;
@@ -110,14 +108,7 @@ html {
 	}
 }
 
-.option-card {
-	padding: 0.75rem;
-	flex-basis: 33.33%;
-}
-
-/* -----------------------------------
-  standalone classes
------------------------------------ */
+/* Standalone classes */
 .input {
 	background-color: transparent;
 	color: $--color-black;
@@ -197,18 +188,18 @@ html {
 	}
 }
 
-.icon-group {
-	display: flex;
-	list-style-type: none;
-}
-
 .icon {
 	display: flex;
 	justify-content: center;
 	margin: 0.75rem;
 	cursor: pointer;
 
-	.icon-vector {
+	&-group {
+		display: flex;
+		list-style-type: none;
+	}
+
+	&-vector {
 		fill: $--color-grey;
 		height: 24px;
 		width: 24px;

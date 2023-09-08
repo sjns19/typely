@@ -43,7 +43,6 @@ export default [
 	"Hanna-Barbera pitched The Flintstones to networks for 8 weeks before it was finally picked up. It became the first-ever animated show to air during primetime.",
 	"There is a company that sells mirrors that make people look 10 pounds thinner. Overall, the mirrors have contributed to 54% of total sales for retailers that use it.",
 	"When Space Invaders was created, Tomohiro Nishikado left in the lag caused by more invaders on the screen in order to create greater difficulty in the games.",
-	" Sliced bread was first manufactured by machine and sold in the 1920s by the Chillicothe Baking Company in Missouri. It was the greatest thing since…unsliced bread.",
 	"Researches have found that flossing your teeth can help your memory. Flossing prevents gum disease, which prevents stiff blood vessels, which cause memory issues.",
 	"For nearly 60 years, Texas didn’t have an official state flag between 1879 & 1933. During that time, the Lone Star flag was the active, but the unofficial flag.",
 	"Red Solo cups are a common souvenir to bring back from the United States. The novelty comes from the cups being used in many party scenes in movies.",

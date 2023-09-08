@@ -251,7 +251,7 @@ const Tester: Tester = {
 
 		let titleString = `
       <div class="txt-center txt-lg">
-        <p class="emoji-xl">${emoji}</p>
+        <p style="font-size: 5rem">${emoji}</p>
         <h3>${title}</h3>
       </div>
     `;
